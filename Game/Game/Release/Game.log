@@ -1,0 +1,73 @@
+﻿  ActiveVampireBat.cpp
+c:\users\minh man\desktop\game\game\Graphics.h(3): fatal error C1083: Cannot open include file: 'd3dx9.h': No such file or directory
+  Animation.cpp
+  BigFire.cpp
+c:\users\minh man\desktop\game\game\Graphics.h(3): fatal error C1083: Cannot open include file: 'd3dx9.h': No such file or directory
+  Camera.cpp
+c:\users\minh man\desktop\game\game\Graphics.h(3): fatal error C1083: Cannot open include file: 'd3dx9.h': No such file or directory
+  CandleSmall.cpp
+c:\users\minh man\desktop\game\game\Graphics.h(3): fatal error C1083: Cannot open include file: 'd3dx9.h': No such file or directory
+  ChangeStage.cpp
+c:\users\minh man\desktop\game\game\Graphics.h(3): fatal error C1083: Cannot open include file: 'd3dx9.h': No such file or directory
+  Door.cpp
+c:\users\minh man\desktop\game\game\Graphics.h(3): fatal error C1083: Cannot open include file: 'd3dx9.h': No such file or directory
+  Enemy.cpp
+c:\users\minh man\desktop\game\game\Graphics.h(3): fatal error C1083: Cannot open include file: 'd3dx9.h': No such file or directory
+  GameTime.cpp
+  Game.cpp
+c:\users\minh man\desktop\game\game\Graphics.h(3): fatal error C1083: Cannot open include file: 'd3dx9.h': No such file or directory
+  GameWindow.cpp
+GameWindow.cpp(34): error C2440: '=': cannot convert from 'const char [12]' to 'LPCWSTR'
+  GameWindow.cpp(34): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+GameWindow.cpp(37): error C2664: 'HWND CreateWindowExW(DWORD,LPCWSTR,LPCWSTR,DWORD,int,int,int,int,HWND,HMENU,HINSTANCE,LPVOID)': cannot convert argument 2 from 'const char [12]' to 'LPCWSTR'
+  GameWindow.cpp(37): note: Types pointed to are unrelated; conversion requires reinterpret_cast, C-style cast or function-style cast
+  Gate1.cpp
+c:\users\minh man\desktop\game\game\Graphics.h(3): fatal error C1083: Cannot open include file: 'd3dx9.h': No such file or directory
+  GObject.cpp
+c:\users\minh man\desktop\game\game\Graphics.h(3): fatal error C1083: Cannot open include file: 'd3dx9.h': No such file or directory
+  Graphics.cpp
+c:\users\minh man\desktop\game\game\Graphics.h(3): fatal error C1083: Cannot open include file: 'd3dx9.h': No such file or directory
+  Keyboard.cpp
+  C:\Program Files (x86)\Windows Kits\8.1\Include\um\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  MAIN.cpp
+c:\users\minh man\desktop\game\game\Graphics.h(3): fatal error C1083: Cannot open include file: 'd3dx9.h': No such file or directory
+  Map.cpp
+c:\users\minh man\desktop\game\game\Graphics.h(3): fatal error C1083: Cannot open include file: 'd3dx9.h': No such file or directory
+  MovableObject.cpp
+c:\users\minh man\desktop\game\game\Graphics.h(3): fatal error C1083: Cannot open include file: 'd3dx9.h': No such file or directory
+  ObjectsFilter.cpp
+c:\users\minh man\desktop\game\game\Graphics.h(3): fatal error C1083: Cannot open include file: 'd3dx9.h': No such file or directory
+  Panther.cpp
+c:\users\minh man\desktop\game\game\Graphics.h(3): fatal error C1083: Cannot open include file: 'd3dx9.h': No such file or directory
+  Compiling...
+  QuadTree.cpp
+c:\users\minh man\desktop\game\game\Graphics.h(3): fatal error C1083: Cannot open include file: 'd3dx9.h': No such file or directory
+  QuadTreeNode.cpp
+c:\users\minh man\desktop\game\game\Graphics.h(3): fatal error C1083: Cannot open include file: 'd3dx9.h': No such file or directory
+  RectF.cpp
+RectF.cpp(15): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+RectF.cpp(20): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+RectF.cpp(25): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+RectF.cpp(30): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+  Simon.cpp
+c:\users\minh man\desktop\game\game\Graphics.h(3): fatal error C1083: Cannot open include file: 'd3dx9.h': No such file or directory
+  Sprite.cpp
+c:\users\minh man\desktop\game\game\Graphics.h(3): fatal error C1083: Cannot open include file: 'd3dx9.h': No such file or directory
+  SpriteManager.cpp
+c:\users\minh man\desktop\game\game\Graphics.h(3): fatal error C1083: Cannot open include file: 'd3dx9.h': No such file or directory
+  Stage.cpp
+c:\users\minh man\desktop\game\game\Graphics.h(3): fatal error C1083: Cannot open include file: 'd3dx9.h': No such file or directory
+  Stair.cpp
+c:\users\minh man\desktop\game\game\Graphics.h(3): fatal error C1083: Cannot open include file: 'd3dx9.h': No such file or directory
+  SweptAABB.cpp
+c:\users\minh man\desktop\game\game\Graphics.h(3): fatal error C1083: Cannot open include file: 'd3dx9.h': No such file or directory
+  Texture.cpp
+c:\users\minh man\desktop\game\game\Graphics.h(3): fatal error C1083: Cannot open include file: 'd3dx9.h': No such file or directory
+  TileMap.cpp
+c:\users\minh man\desktop\game\game\Graphics.h(3): fatal error C1083: Cannot open include file: 'd3dx9.h': No such file or directory
+  Vampire_Bat.cpp
+c:\users\minh man\desktop\game\game\Graphics.h(3): fatal error C1083: Cannot open include file: 'd3dx9.h': No such file or directory
+  Whip.cpp
+c:\users\minh man\desktop\game\game\Graphics.h(3): fatal error C1083: Cannot open include file: 'd3dx9.h': No such file or directory
+  Zombie.cpp
+c:\users\minh man\desktop\game\game\Graphics.h(3): fatal error C1083: Cannot open include file: 'd3dx9.h': No such file or directory

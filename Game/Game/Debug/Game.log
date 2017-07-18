@@ -1,0 +1,145 @@
+﻿  Zombie.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+e:\tailieu\hk7\game\game\game\zombie.cpp(18): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+e:\tailieu\hk7\game\game\game\zombie.cpp(25): warning C4305: '=': truncation from 'double' to 'float'
+  Whip.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+e:\tailieu\hk7\game\game\game\whip.cpp(51): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+e:\tailieu\hk7\game\game\game\whip.cpp(52): warning C4244: '=': conversion from 'LONG' to 'float', possible loss of data
+  Vampire_Bat.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+e:\tailieu\hk7\game\game\game\vampire_bat.cpp(38): warning C4305: '=': truncation from 'double' to 'float'
+e:\tailieu\hk7\game\game\game\vampire_bat.cpp(61): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+e:\tailieu\hk7\game\game\game\vampire_bat.cpp(62): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+e:\tailieu\hk7\game\game\game\vampire_bat.cpp(66): warning C4244: '-=': conversion from 'float' to 'int', possible loss of data
+e:\tailieu\hk7\game\game\game\vampire_bat.cpp(77): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  TileMap.cpp
+e:\tailieu\hk7\game\game\game\tilemap.cpp(35): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+  Texture.cpp
+e:\tailieu\hk7\game\game\game\texture.cpp(45): warning C4244: 'argument': conversion from 'int' to 'FLOAT', possible loss of data
+e:\tailieu\hk7\game\game\game\texture.cpp(55): warning C4244: 'argument': conversion from 'int' to 'FLOAT', possible loss of data
+  SweptAABB.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+e:\tailieu\hk7\game\game\game\sweptaabb.cpp(33): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+e:\tailieu\hk7\game\game\game\sweptaabb.cpp(34): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+e:\tailieu\hk7\game\game\game\sweptaabb.cpp(91): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+e:\tailieu\hk7\game\game\game\sweptaabb.cpp(92): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+e:\tailieu\hk7\game\game\game\sweptaabb.cpp(313): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\tailieu\hk7\game\game\game\sweptaabb.cpp(315): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\tailieu\hk7\game\game\game\sweptaabb.cpp(324): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\tailieu\hk7\game\game\game\sweptaabb.cpp(326): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  Stair.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+e:\tailieu\hk7\game\game\game\stair.cpp(17): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+e:\tailieu\hk7\game\game\game\stair.cpp(18): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+e:\tailieu\hk7\game\game\game\stair.cpp(28): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+e:\tailieu\hk7\game\game\game\stair.cpp(29): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+  Stage.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+e:\tailieu\hk7\game\game\game\stage.cpp(31): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\tailieu\hk7\game\game\game\stage.cpp(32): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\tailieu\hk7\game\game\game\stage.cpp(34): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\tailieu\hk7\game\game\game\stage.cpp(35): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\tailieu\hk7\game\game\game\stage.cpp(40): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\tailieu\hk7\game\game\game\stage.cpp(41): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\tailieu\hk7\game\game\game\stage.cpp(43): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\tailieu\hk7\game\game\game\stage.cpp(44): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  SpriteManager.cpp
+  Sprite.cpp
+  Simon.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+e:\tailieu\hk7\game\game\game\simon.cpp(57): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+e:\tailieu\hk7\game\game\game\simon.cpp(168): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+e:\tailieu\hk7\game\game\game\simon.cpp(178): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\tailieu\hk7\game\game\game\simon.cpp(188): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+e:\tailieu\hk7\game\game\game\simon.cpp(249): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\tailieu\hk7\game\game\game\simon.cpp(256): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\tailieu\hk7\game\game\game\simon.cpp(262): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\tailieu\hk7\game\game\game\simon.cpp(263): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\tailieu\hk7\game\game\game\simon.cpp(278): warning C4244: '=': conversion from 'double' to 'float', possible loss of data
+e:\tailieu\hk7\game\game\game\simon.cpp(365): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+e:\tailieu\hk7\game\game\game\simon.cpp(374): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+e:\tailieu\hk7\game\game\game\simon.cpp(407): warning C4305: '=': truncation from 'double' to 'float'
+e:\tailieu\hk7\game\game\game\simon.cpp(420): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+e:\tailieu\hk7\game\game\game\simon.cpp(421): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+e:\tailieu\hk7\game\game\game\simon.cpp(434): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+  RectF.cpp
+e:\tailieu\hk7\game\game\game\rectf.cpp(15): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+e:\tailieu\hk7\game\game\game\rectf.cpp(20): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+e:\tailieu\hk7\game\game\game\rectf.cpp(25): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+e:\tailieu\hk7\game\game\game\rectf.cpp(30): warning C4244: 'return': conversion from 'float' to 'int', possible loss of data
+  QuadTreeNode.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  QuadTree.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  Panther.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  ObjectsFilter.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  MovableObject.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+e:\tailieu\hk7\game\game\game\movableobject.cpp(30): warning C4305: '=': truncation from 'double' to 'float'
+  Map.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+e:\tailieu\hk7\game\game\game\map.cpp(120): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\tailieu\hk7\game\game\game\map.cpp(121): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\tailieu\hk7\game\game\game\map.cpp(122): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\tailieu\hk7\game\game\game\map.cpp(123): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\tailieu\hk7\game\game\game\map.cpp(151): warning C4018: '<': signed/unsigned mismatch
+  MAIN.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  Keyboard.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  Generating Code...
+  Compiling...
+  HitEffect2.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  HitEffect.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+e:\tailieu\hk7\game\game\game\hiteffect.cpp(27): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\tailieu\hk7\game\game\game\hiteffect.cpp(28): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\tailieu\hk7\game\game\game\hiteffect.cpp(32): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  Graphics.cpp
+  GObject.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+e:\tailieu\hk7\game\game\game\gobject.cpp(26): warning C4244: 'initializing': conversion from 'float' to 'int', possible loss of data
+e:\tailieu\hk7\game\game\game\gobject.cpp(36): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+e:\tailieu\hk7\game\game\game\gobject.cpp(39): warning C4244: 'argument': conversion from 'float' to 'int', possible loss of data
+e:\tailieu\hk7\game\game\game\gobject.cpp(70): warning C4305: '=': truncation from 'double' to 'float'
+e:\tailieu\hk7\game\game\game\gobject.cpp(108): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  Gate1.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  GameWindow.cpp
+e:\tailieu\hk7\game\game\game\gamewindow.cpp(53): warning C4101: 'hdc': unreferenced local variable
+e:\tailieu\hk7\game\game\game\gamewindow.cpp(52): warning C4101: 'ps': unreferenced local variable
+e:\tailieu\hk7\game\game\game\gamewindow.cpp(51): warning C4101: 'wmEvent': unreferenced local variable
+e:\tailieu\hk7\game\game\game\gamewindow.cpp(51): warning C4101: 'wmId': unreferenced local variable
+  Game.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  GameTime.cpp
+  Enemy.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+e:\tailieu\hk7\game\game\game\enemy.cpp(26): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+e:\tailieu\hk7\game\game\game\enemy.cpp(27): warning C4244: '=': conversion from 'float' to 'int', possible loss of data
+e:\tailieu\hk7\game\game\game\enemy.cpp(35): warning C4305: '=': truncation from 'double' to 'float'
+e:\tailieu\hk7\game\game\game\enemy.cpp(37): warning C4305: '=': truncation from 'double' to 'float'
+e:\tailieu\hk7\game\game\game\enemy.cpp(39): warning C4305: '=': truncation from 'double' to 'float'
+  Door.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  DelayTime.cpp
+  ChangeStage.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+e:\tailieu\hk7\game\game\game\changestage.cpp(14): warning C4244: '=': conversion from 'int' to 'float', possible loss of data
+  CandleSmall.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  Camera.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+e:\tailieu\hk7\game\game\game\camera.cpp(82): warning C4018: '<': signed/unsigned mismatch
+  BigFire.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  Animation.cpp
+  ActiveVampireBat.cpp
+  c:\program files (x86)\microsoft directx sdk (june 2010)\include\dinput.h: DIRECTINPUT_VERSION undefined. Defaulting to version 0x0800
+  Generating Code...
+  Game.vcxproj -> E:\TAILIEU\HK7\Game\Game\Debug\Game.exe
+  Game.vcxproj -> E:\TAILIEU\HK7\Game\Game\Debug\Game.pdb (Partial PDB)

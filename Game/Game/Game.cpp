@@ -4,8 +4,8 @@
 #include "Zombie.h"
 #include"Camera.h"
 #include"SweptAABB.h"
-
-#include"HitEffect.h"
+#include"GameStatus.h"
+#include"GameStatus.h"
 
 Game* Game::instance=0;
 
@@ -27,40 +27,15 @@ void Game::init()
 }
 void Game::update()
 {
-
 	map->update();
-
-	//for each (auto obj in map->objects)
-	//{
-	//	obj->update();
-	//	SWEPT_AABB->checkCollision(SIMON, obj);
-	//}
-
-	for each (auto hitEffect in *HitEffect::getHitEffects())
-	{
-		hitEffect->update();
-	}
-
+	GAMESTATUS->update();
 }
 
 void Game::draw()
 {
-	
 	map->draw();
-
-
-	for each (auto hitEffect in *HitEffect::getHitEffects())
-	{
-		hitEffect->draw();
-	}
-
-	/*for each (auto obj in map->objects)
-	{
-		obj->draw();
-	}*/
+	GAMESTATUS->draw();
 	SIMON->draw();
-//	Zombie::getInstance()->draw();
-
 }
 
 Game::Game()

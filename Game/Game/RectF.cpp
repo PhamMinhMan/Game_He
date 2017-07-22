@@ -47,12 +47,6 @@ RECT RectF::toRECT()// tra ra 1 kieu RECT cua window tu bien RectF
 	return r;
 }
 
-bool RectF::checkIntersect(RectF * M, RectF * S)
-{
-	return (M->bottom() < S->top() && M->top() > S->bottom()
-		&& M->left() < S->right() && M->right() > S->left());
-}
-
 RectF::RectF()
 {
 	dx = dy = vy = ay = vx = 0;

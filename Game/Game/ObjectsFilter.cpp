@@ -26,9 +26,9 @@ void ObjectsFilter::addObject(GObject * obj)
 	case CF_CandleSmall:
 		candleObjects._Add(obj);
 		break;
-	case CF_Panther:
+	/*case CF_Panther:
 		enemyObjects._Add(obj);
-		break;
+		break;*/
 	case CF_ChangeStage:
 		changeStageObjects._Add(obj);
 		break;

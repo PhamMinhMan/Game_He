@@ -9,7 +9,7 @@
 #include"ChangeStage.h"
 #include"Vampire_Bat.h"
 #include "ActiveVampireBat.h"
-
+#include "HitEffect.h"
 void Map::initStages(const char * stagePath)
 {
 	Stage* stage;
@@ -98,7 +98,7 @@ Map::Map(const char* matrixPath, const char* tileSheetPath,
 			break;
 		case SPR_Vampire_Bat:
 			obj = new Vampire_Bat();
-			Vampire_Bat::instance = (Vampire_Bat*)obj;
+//			Vampire_Bat::instance = (Vampire_Bat*)obj;
 			break;
 		case SPR_ActiveVampireBat:
 			obj = new ActiveVampireBat();
@@ -143,8 +143,6 @@ void Map::update()
 		Door::curDoor->update();
 		return;
 	}
-
-
 	SIMON->update();
 
 	//for each (auto obj in CAMERA->objects.allObjects)
@@ -194,10 +192,26 @@ void Map::update()
 		SWEPT_AABB->checkCollision(SIMON, changeStage);
 	}
 
+	for each (auto candleSmall in CAMERA->objects.candleObjects)
+	{
+		SWEPT_AABB->checkCollision(SIMON->whip, candleSmall);
+	}
 
 	for each (auto obj in CAMERA->objects.allObjects)
 	{
 		obj->updateLocation();
+	}
+
+	for (int i = 0; i < HitEffect::getHitEffects()->size(); i++)
+	{
+		HitEffect* hitEffect = HitEffect::getHitEffects()->at(i);
+		hitEffect->update();
+		if (hitEffect->allowDelete)
+		{
+			HitEffect::getHitEffects()->_Remove(hitEffect);
+			delete hitEffect;
+			i--;
+		}
 	}
 
 	SIMON->updateLocation();
@@ -211,6 +225,10 @@ void Map::draw()
 	for each (auto obj in CAMERA->objects.allObjects)
 	{
 		obj->draw();
+	}
+	for each (auto hitEffect in *HitEffect::getHitEffects())
+	{
+		hitEffect->draw();
 	}
 }
 

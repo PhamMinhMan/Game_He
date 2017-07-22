@@ -17,6 +17,7 @@ Vampire_Bat::Vampire_Bat()
 	vx = 0;
 	timeWait.init(3000);
 	timeActivity.init(2000);
+	instance = this;
 }
 
 bool Vampire_Bat::update()
@@ -33,13 +34,13 @@ bool Vampire_Bat::update()
 		vx = -vx;
 	}
 
-	if (timeWait.OnTime() && timeWait.atTime())
+	if (timeWait.OnTime())
 	{
 		vx = VX_VAMPIRE_BAT;
 		timeActivity.start();
 	}
 
-	if (timeActivity.OnTime() && timeActivity.atTime())
+	if (timeActivity.OnTime())
 	{
 		timeWait.start();
 		vx = 0;

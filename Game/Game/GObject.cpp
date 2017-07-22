@@ -129,7 +129,7 @@ GObject::GObject()
 	curFrame = 0;
 	curAnimation = 0;
 	direction = Right;
-	delay.tickPerFrame = 100;
+	delay.deltaTime = 100;
 	objectFilter = CF_Ground;
 	delay.start();
 	alive = true;

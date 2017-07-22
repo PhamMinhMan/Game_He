@@ -5,25 +5,25 @@
 
 void ChangeStage::onInterserct(GObject * other)
 {
-	if (SIMON->dy > 0 && id == -206 && SIMON->onStair && bottom()> SIMON->bottom())
+	if (SIMON->dy <= 0 && id == -206 && SIMON->onStair && top() <= SIMON->top())
 	{
 		SIMON->x = x - 16;
-		SIMON->y = bottom() + 24 - SIMON->height;
+		SIMON->y = bottom() - 24 + SIMON->height;
 		SIMON->dx = 0;
 		SIMON->dy = 0;
-		CAMERA->y = bottom();
+		CAMERA->y = bottom() + 64;
 		SIMON->curFrame = 0;
 		SIMON->atDestination();
 	}
 
 
-	if (SIMON->dy < 0 && id == -106 && SIMON->onStair && bottom()< SIMON->bottom())
+	if (SIMON->dy > 0 && id == -106 && SIMON->onStair && bottom()> SIMON->bottom())
 	{
 		SIMON->x = x;
-		SIMON->y = top() - 8 - SIMON->height;
+		SIMON->y = top() + 8 + SIMON->height;
 		SIMON->dx = 0;
 		SIMON->dy = 0;
-		CAMERA->y = bottom() - CAMERA->height;
+		CAMERA->y = bottom() + CAMERA->height + 8;
 		SIMON->curFrame = 0;
 		SIMON->atDestination();
 	}
@@ -31,7 +31,7 @@ void ChangeStage::onInterserct(GObject * other)
 
 void ChangeStage::onCollision(GObject * other, int nx, int ny)
 {
-	if (ny == -1)
+	if (ny == 1)
 		SweptAABB::getInstance()->preventMove(other, this);
 }
 

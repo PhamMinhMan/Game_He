@@ -13,7 +13,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 	MSG msg;
 	ZeroMemory(&msg, sizeof(msg));
 
-	GameTime::getInstance()->tickPerFrame = 10;
+	GameTime::getInstance()->deltaTime = 11;
 	GameTime::getInstance()->start();
 
 	GAME->init();
@@ -40,7 +40,7 @@ int WINAPI WinMain(HINSTANCE hInstance, HINSTANCE hPrevInstance, LPSTR lpCmdLine
 			}
 			else
 			{
-				Sleep(GameTime::getInstance()->tickPerFrame);
+				Sleep(GameTime::getInstance()->deltaTime);
 			}
 		}
 	}

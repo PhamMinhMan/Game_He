@@ -1,7 +1,8 @@
 #pragma once
 #include "MovableObject.h"
+#include"WhipAttackable.h"
 class CandleSmall :
-	public MovableObject
+	public WhipAttackable
 {
 	static CandleSmall* instance;
 public:

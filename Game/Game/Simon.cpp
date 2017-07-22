@@ -1,5 +1,6 @@
 #include "Simon.h"
 #include "Config.h"
+#include"GameStatus.h"
 
 Simon * Simon::instance = 0;
 Simon * Simon::getInstance()
@@ -11,21 +12,23 @@ Simon * Simon::getInstance()
 
 bool Simon::update()
 {
-	if (timeFlicker.OnTime())
-	{
-		if (timeDraw.atTime())
-			alowDraw = !alowDraw;
-	}
-	else
-		alowDraw = true;
-
-
 	if (onStair)
 	{
 		setHeight(30);
 		updateStair();
 		return true;
 	}
+
+	if (!delayFlicker.OnTime())
+	{
+		allowRender = true;
+	}
+	else
+	{
+		if(curAnimation!=AS_LUI)
+			allowRender = timeFlicker.atTime();
+	}
+
 
 	updateAnimation();
 	if (onAttack)
@@ -59,7 +62,8 @@ bool Simon::update()
 			}
 			else
 			{
-				vx = 0;
+				if(curAnimation != AS_LUI)
+					vx = 0;
 				setAction(AS_DUNG);
 			}
 		}
@@ -67,7 +71,7 @@ bool Simon::update()
 	}
 	else
 	{
-		if(!onAttack)
+		if(!onAttack && curAnimation != AS_LUI)
 			setAction(AS_NHAY);
 	}
 
@@ -90,8 +94,6 @@ bool Simon::update()
 	//	onAttack = true;
 	//	setAction(AS_DUNG_DANH);
 	//}
-
-
 
 	////if (!onAttack)
 	////{
@@ -136,24 +138,19 @@ bool Simon::update()
 	////		//	dy = 0;
 	////		//}
 	////	//}
-
-
 	////}
-
 
 	//if (!MovableObject::update())
 	//	return false;
-
 
 	return true;
 }
 
 bool Simon::draw()
 {
-	if (sprite == 0)
+	if (!allowRender)
 		return false;
-
-	if (!alowDraw)
+	if (sprite == 0)
 		return false;
 
 	int frameWidth = sprite->animations[curAnimation].rects[curFrame].right - sprite->animations[curAnimation].rects[curFrame].left;
@@ -162,10 +159,9 @@ bool Simon::draw()
 	float yView;
 
 	CAMERA->convertToRenderPos(x, y, xView, yView);
-
 	xView = xView - (frameWidth - width) / 2;
-
 	int truc = xView + (frameWidth) / 2;
+
 	D3DXMATRIX mat;
 	if (direction != sprite->image->defautDirection)
 	{
@@ -187,12 +183,19 @@ bool Simon::draw()
 
 	sprite->draw(xView, yView, curAnimation, curFrame);
 
+
+
 	if (direction != sprite->image->defautDirection)
 	{
 		D3DXMatrixIdentity(&mat);
 		Graphics::getInstance()->GetSprite()->SetTransform(&mat);
 	}
 	return true;
+}
+
+void Simon::setHealth(int health)
+{
+	healthCount = health;
 }
 
 void Simon::setLife(int newLifeCount)
@@ -322,26 +325,26 @@ void Simon::atDestination()
 		goUp(stair);
 	}
 
-	if (stair->id == ST_LeftDownPrevent || stair->id == ST_LeftDown && bottom() == stair->top() && curAnimation == AS_LEN)
+	if ( (stair->id == ST_LeftDownPrevent || stair->id == ST_LeftDown ) && bottom() >= stair->top() && curAnimation == AS_LEN)
 	{
 		onStair = false;
 	//	dx = 8;
 	}
 
-	if (stair->id == ST_LeftDownPrevent || stair->id == ST_LeftDown && bottom() == stair->top() && curAnimation != AS_LEN)
+	if ( (stair->id == ST_LeftDownPrevent || stair->id == ST_LeftDown ) && bottom() >= stair->top() && curAnimation != AS_LEN)
 	{
 		goDown(stair);
 
 	}
 
 	///
-	if ((stair->id == ST_RightDownPrevent || stair->id == ST_RightDown) && bottom() == stair->top() && curAnimation == AS_LEN)
+	if ((stair->id == ST_RightDownPrevent || stair->id == ST_RightDown) && bottom() >= stair->top() && curAnimation == AS_LEN)
 	{
 		onStair = false;
 	//	dx = 8;
 	}
 	///
-	if ((stair->id == ST_RightDownPrevent || stair->id == ST_RightDown) && bottom() == stair->top() && curAnimation != AS_LEN)
+	if ((stair->id == ST_RightDownPrevent || stair->id == ST_RightDown) && bottom() >= stair->top() && curAnimation != AS_LEN)
 	{
 		goDown(stair);
 
@@ -411,7 +414,7 @@ void Simon::onCollision(GObject * other, int nx, int ny)
 		}
 	}
 	
-	if (other->id == ST_LeftDownPrevent || other->id == ST_LeftDown && ny == 1)
+	if ( (other->id == ST_LeftDownPrevent || other->id == ST_LeftDown) && ny == 1)
 	{
 		
 
@@ -426,11 +429,11 @@ void Simon::onCollision(GObject * other, int nx, int ny)
 	}
 
 	
-	if (other->id == ST_RightDownPrevent || other->id == ST_RightDown && ny == 1)
+	if ( (other->id == ST_RightDownPrevent || other->id == ST_RightDown) && ny == 1)
 	{
 		if (Keyboard::getInstance()->keyDown && !onStair)
 		{
-			int xDestination = other->left() -8;
+			int xDestination = other->left() ;
 			int yDestination = other->top() + height;
 			onStair = true;
 			stairDirection = Left;
@@ -441,11 +444,22 @@ void Simon::onCollision(GObject * other, int nx, int ny)
 	if (other->id == ST_LeftDownPrevent || other->id == ST_RightDownPrevent)
 	{
 		SweptAABB::getInstance()->preventMove(this, other);
-		if (ny == -1)
+		if (ny == 1)
+		{
+			onGround = true;
 			vy = 0;
+		}
 	}
 
 }
+
+//setHealth(int newHelth)
+//{ health = newHealth; }
+
+
+//health -=2;
+
+//health +=3;
 
 Simon::Simon()
 {
@@ -459,15 +473,18 @@ Simon::Simon()
 
 	stairDirection = Right;
 
-	timeDraw.init(20);
-	timeFlicker.init(3000);
-	//timeDraw.start();
-
 	onStair = false;
 	onGoing = false;
 	whip = new Whip();
 	onAttack = false;
-	alowDraw = true;
+	allowRender = true;
+
+	timeFlicker.init(20);
+	delayFlicker.init(2000);
+
+	healthCount = GAMESTATUS->maxHealth;
+
+
 }
 
 

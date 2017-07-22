@@ -183,13 +183,22 @@
     <ClInclude Include="ActiveVampireBat.h">
       <Filter>Header Files\Objects</Filter>
     </ClInclude>
-    <ClInclude Include="DelayTime.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
     <ClInclude Include="HitEffect.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="HitEffect2.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DelayTime.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="WhipAttackable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="GameStatus.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Number.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>
@@ -296,13 +305,22 @@
     <ClCompile Include="ActiveVampireBat.cpp">
       <Filter>Source Files\Objects</Filter>
     </ClCompile>
-    <ClCompile Include="DelayTime.cpp">
-      <Filter>Source Files</Filter>
-    </ClCompile>
     <ClCompile Include="HitEffect.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
     <ClCompile Include="HitEffect2.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="DelayTime.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="WhipAttackable.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="GameStatus.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="Number.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

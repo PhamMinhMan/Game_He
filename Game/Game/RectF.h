@@ -19,8 +19,6 @@ public:
 
 	RECT toRECT();
 
-	static bool checkIntersect(RectF * M, RectF * S);
-
 	RectF();
 	~RectF();
 };

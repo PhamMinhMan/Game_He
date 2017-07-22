@@ -13,19 +13,20 @@ CandleSmall * CandleSmall::getInstance()
 
 bool CandleSmall::update()
 {
-	if (!MovableObject::update())
+	if (!GObject::update())
 		return false;
 	return true;
 }
 
 bool CandleSmall::draw()
 {
-	if (MovableObject::draw())
+	if (GObject::draw())
 	{
 		return true;
 	}
 	return false;
 }
+
 
 CandleSmall::CandleSmall()
 {

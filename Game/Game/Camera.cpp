@@ -2,7 +2,9 @@
 #include"Config.h"
 #include"Simon.h"
 #include "Stage.h"
+
 #include"Vampire_Bat.h"
+
 
 Camera * Camera::instance = 0;
 
@@ -48,8 +50,8 @@ void Camera::update()
 	}
 
 
-	if (Vampire_Bat::instance->active)
-		dx = 0;
+	//if (Vampire_Bat::instance->active)
+	//	dx = 0;
 
 	x += dx;
 }
@@ -81,8 +83,8 @@ void Camera::remove()
 {
 	for (int  i = 0; i < objects.allObjects.size(); i++)
 	{
-		if (!RectF::checkIntersect(CAMERA, objects.allObjects[i])
-			&& !RectF::checkIntersect(CAMERA, &objects.allObjects[i]->oldRect))
+		if (!SWEPT_AABB->AABBCheck(CAMERA, objects.allObjects[i])
+			&& !SWEPT_AABB->AABBCheck(CAMERA, &objects.allObjects[i]->oldRect))
 		{
 			objects.allObjects[i]->restore();
 			objects.removeObject(objects.allObjects[i]);

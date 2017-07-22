@@ -15,12 +15,8 @@ public:
 	bool update();
 	bool draw();
 
-	GameTime timeDraw;
-
-	DelayTime timeFlicker;
-
-	bool alowDraw;
-
+	int healthCount;//mau
+	void setHealth(int health);
 	int lifeCount;
 
 	void setLife(int newLifeCount);
@@ -66,6 +62,10 @@ public:
 
 #pragma endregion
 
+	bool allowRender;
+
+	GameTime timeFlicker;
+	DelayTime delayFlicker;
 
 	Simon();
 	~Simon();

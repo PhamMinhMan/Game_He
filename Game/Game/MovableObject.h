@@ -1,6 +1,7 @@
 #pragma once
 #include "GObject.h"
-class MovableObject : public GObject
+class MovableObject : 
+	public virtual GObject
 {
 public:
 	virtual bool update();

@@ -16,7 +16,7 @@ public:
 	RectF getSweptBroadphase(GObject* M);
 
 	//kiem tra 2 hinh co giao nhau hay khong
-	//bool AABBCheck(RectF* M, RectF* S);
+	bool AABBCheck(RectF* M, RectF* S);
 
 	//kiem tra va cham
 	float sweptAABB(GObject* M, GObject* S, int& normalX, int& normalY);

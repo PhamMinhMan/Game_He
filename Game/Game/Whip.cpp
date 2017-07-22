@@ -8,9 +8,9 @@ Point * Whip::getWhipLocations()
 	if (whipLocations == 0)
 	{
 		whipLocations = new Point[3];
-		whipLocations[0].init(24, 7);
+		whipLocations[0].init(25, 8);
 		whipLocations[1].init(17, 5);
-		whipLocations[2].init(0, 14);
+		whipLocations[2].init(0, 15);
 	}
 	return whipLocations;
 }
@@ -22,10 +22,10 @@ Point Whip::getCurPoint()
 
 bool Whip::draw()
 {
-	curFrame = Simon::getInstance()->curFrame;
+	curFrame = SIMON->curFrame;
 	Point curPoint = getCurPoint();
-	x = Simon::getInstance()->x + curPoint.X;
-	y = Simon::getInstance()->y - curPoint.Y;
+	x = SIMON->x + curPoint.X;
+	y = SIMON->y - curPoint.Y;
 	if (curFrame == 2)
 	{
 		x -= width;
@@ -38,9 +38,7 @@ bool Whip::draw()
 	{
 		x += (width + SIMON->width);
 	}
-
 	return true;
-
 }
 
 Whip::Whip()

@@ -1,13 +1,13 @@
 #pragma once
 #include "MovableObject.h"
+#include"WhipAttackable.h"
 class Enemy :
-	public MovableObject
+	public MovableObject,public WhipAttackable
 {
 public:
 	/*bool update();
 	bool draw();*/
 	virtual void onInterserct(GObject* other);
-	virtual bool draw();
 	Enemy();
 	~Enemy();
 };

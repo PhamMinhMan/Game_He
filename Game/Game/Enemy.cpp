@@ -1,8 +1,6 @@
 #include "Enemy.h"
-
+#include "HitEffect.h"
 #include"Simon.h"
-
-#include"HitEffect.h"
 
 //bool Enemy::update()
 //{
@@ -16,34 +14,24 @@
 
 void Enemy::onInterserct(GObject * other)
 {
-	if (other == SIMON->whip && SIMON->onAttack && SIMON->whip->curFrame==2)
-	{
-		this->alive = false;
-		HitEffect* hitEffect = new HitEffect();
-
-		HitEffect::getHitEffects()->_Add(hitEffect);
-
-		hitEffect->xObject = x;
-		hitEffect->yObject = y;
-
-	}
+	WhipAttackable::onInterserct(other);
 	if (other==SIMON)
 	{
-		SIMON->timeFlicker.start();
-		if(!SIMON->onStair)
-			SIMON->setAction(AS_LUI);
-		SIMON->vy = 0.05;
-		if (SIMON->xCenter() < xCenter())
-			SIMON->vx = -0.1;
-		else
-			SIMON->vx = 0.1;
-
+		if (!SIMON->delayFlicker.OnTime())
+		{
+			//bi thuong
+			SIMON->setHealth(SIMON->healthCount - 1);
+			if(!SIMON->onStair)
+				SIMON->setAction(AS_LUI);
+			SIMON->vy = 0.05;
+			if (SIMON->xCenter() < xCenter())
+				SIMON->direction = Right;
+			else
+				SIMON->direction = Left;
+			SIMON->vx = -SIMON->direction* 0.1;
+			SIMON->delayFlicker.start();
+		}
 	}
-}
-
-bool Enemy::draw()
-{
-	return GObject::draw();
 }
 
 Enemy::Enemy()

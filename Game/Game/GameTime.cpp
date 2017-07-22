@@ -26,27 +26,25 @@ void GameTime::start()
 	onTime = true;
 }
 
-GameTime::GameTime(DWORD tickPerFrame)
+GameTime::GameTime(DWORD deltaTime)
 {
 	onTime = false;
-	this->tickPerFrame = tickPerFrame;
+	this->deltaTime = deltaTime;
 }
 
-void GameTime::init(DWORD tickPerFrame)
+void GameTime::init(DWORD deltaTime)
 {
 	onTime = false;
-	this->tickPerFrame = tickPerFrame;
+	this->deltaTime = deltaTime;
 }
 
 
 bool GameTime::atTime()
 {
 	DWORD now = GetTickCount();
-	deltaTime = now - startTime;
-
-	if(deltaTime>=tickPerFrame)
+	if(now - startTime >=deltaTime)
 	{
-		startTime = GetTickCount();
+		startTime = now;
 		onTime = false;
 		return true;
 	}
@@ -59,10 +57,9 @@ void GameTime::update()
 
 
 	DWORD now = GetTickCount();
-	deltaTime = now - startTime;
-	if (deltaTime >= tickPerFrame)
+	if (now - startTime >= deltaTime)
 	{
-		startTime = GetTickCount();
+		startTime = now;
 		onTime = false;
 	}
 }

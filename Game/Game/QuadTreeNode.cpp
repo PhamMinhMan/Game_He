@@ -4,7 +4,7 @@
 
 void QuadTreeNode::findObjectToFillToCamera()
 {
-	if (!RectF::checkIntersect(CAMERA, this))
+	if (!SWEPT_AABB->AABBCheck(CAMERA, this))
 		return;
 	if (tl!=NULL)
 	{

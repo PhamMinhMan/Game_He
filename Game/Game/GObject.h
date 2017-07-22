@@ -8,7 +8,8 @@
 #include"SpriteManager.h"
 #include"SweptAABB.h"
 
-class GObject : public RectF
+class GObject : 
+	public RectF
 {
 public:
 

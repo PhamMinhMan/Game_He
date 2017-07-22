@@ -9,15 +9,15 @@ public:
 	static GameTime* instance;
 	static GameTime* getInstance();
 	DWORD startTime;
-	DWORD tickPerFrame;
 	DWORD deltaTime;
+	//DWORD deltaTime;
 
 	bool OnTime();
 
 	GameTime(void);
 	~GameTime(void);
-	GameTime(DWORD tickPerFrame);
-	void init(DWORD tickPerFrame);
+	GameTime(DWORD deltaTime);
+	void init(DWORD deltaTime);
 	virtual bool atTime();
 	void update();
 	void start();
